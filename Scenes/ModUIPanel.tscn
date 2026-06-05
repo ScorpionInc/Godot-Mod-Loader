@@ -2,6 +2,74 @@
 
 [ext_resource type="Texture2D" uid="uid://bqalt0xw7ng5w" path="res://icon.svg" id="1_8yq7x"]
 
+[sub_resource type="GDScript" id="GDScript_8yq7x"]
+script/source = "extends Control
+
+@export var mod_enable_path    : String = \"\"
+@export var mod_install_path   : String = \"\"
+@export var mod_available_path : String = \"\"
+
+@onready var icon_texture_rect = $MarginContainer/ContentsContainer/AspectRatioContainer/IconTextureRect
+@onready var mod_name_label = $MarginContainer/ContentsContainer/ModNameLabel
+
+@onready var enable_check_btn = $MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer/EnableCheckButton
+@onready var install_check_btn = $MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer/InstallCheckButton
+@onready var delete_btn = $MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer/DeleteButton
+
+# Inherited function(s)/method(s)
+func _ready() -> void:
+	self.on_path_update()
+
+func is_mod_available() -> bool:
+	#!TODO
+	return false
+func is_mod_installed() -> bool:
+	#!TODO
+	return false
+func is_mod_enabled() -> bool:
+	#!TODO
+	return false
+
+func enable_action_btns() -> void:
+	# Enable button
+	if (self.is_mod_installed()):
+		self.enable_check_btn.tooltip_text = \"Enable or disable an installed Mod.\"
+		self.enable_check_btn.disabled = false
+	else:
+		self.enable_check_btn.tooltip_text = \"Mod is not installed and can't be enabled.\"
+		self.enable_check_btn.disabled = true
+
+	# Install button
+	if (self.is_mod_available()):
+		self.install_check_btn.tooltip_text = \"Install the Mod (Disabled)\"
+		self.install_check_btn.disabled = false
+	else:
+		self.install_check_btn.tooltip_text = \"Mod is not available to install.\"
+		self.install_check_btn.disabled = true
+
+	# Delete button
+	if (self.is_mod_available() or self.is_mod_installed() or self.is_mod_enabled()):
+		self.delete_btn.tooltip_text = \"Disable, uninstall, and delete mod.\"
+		self.delete_btn.disabled = false
+	else:
+		self.delete_btn.tooltip_text = \"Mod is not available. (How did you get here?)\"
+		self.delete_btn.disabled = true
+
+func disable_action_btns() -> void:
+	self.enable_check_btn.tooltip_text = \"Actions are disabled.\"
+	self.enable_check_btn.disabled = true
+
+	self.install_check_btn.tooltip_text = \"Actions are disabled.\"
+	self.install_check_btn.disabled = true
+
+	self.delete_btn.tooltip_text = \"Actions are disabled.\"
+	self.delete_btn.disabled = true
+
+func on_path_update() -> void:
+	#! TODO Icon(s) and Name also needs to possibly be updated.
+	self.enable_action_btns()
+"
+
 [node name="ModUIPanel" type="Control" unique_id=1720623482]
 custom_minimum_size = Vector2(256, 160)
 layout_mode = 3
@@ -11,6 +79,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+script = SubResource("GDScript_8yq7x")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1291341707]
 layout_mode = 1
@@ -83,6 +152,10 @@ alignment = 1
 [node name="EnableCheckButton" type="CheckButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer" unique_id=1911452380]
 layout_mode = 2
 text = "Mod Enabled"
+
+[node name="InstallCheckButton" type="CheckButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer" unique_id=1681898366]
+layout_mode = 2
+text = "Mod Installed"
 
 [node name="DeleteButton" type="Button" parent="MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer" unique_id=1727437547]
 layout_mode = 2
