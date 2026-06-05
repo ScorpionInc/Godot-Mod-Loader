@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bqalt0xw7ng5w" path="res://ModLoader/Icons/icon.svg" id="1_8yq7x"]
 [ext_resource type="Texture2D" uid="uid://5xe7diun5jxp" path="res://ModLoader/Icons/link.svg" id="2_yp063"]
 [ext_resource type="Texture2D" uid="uid://c8ogy38nar6i0" path="res://ModLoader/Icons/bug.svg" id="3_m84o8"]
+[ext_resource type="Texture2D" uid="uid://b7lfhqsg61jdd" path="res://ModLoader/Icons/delete.svg" id="4_pq8ey"]
 
 [sub_resource type="GDScript" id="GDScript_8yq7x"]
 script/source = "extends Control
@@ -71,6 +72,9 @@ func on_path_update() -> void:
 	#! TODO Icon(s) and Name also needs to possibly be updated.
 	self.enable_action_btns()
 "
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_m84o8"]
+size = Vector2(16, 16)
 
 [node name="ModUIPanel" type="Control" unique_id=1720623482]
 custom_minimum_size = Vector2(256, 160)
@@ -164,6 +168,7 @@ custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+tooltip_text = "Mod author website"
 texture_normal = ExtResource("2_yp063")
 ignore_texture_size = true
 stretch_mode = 4
@@ -172,7 +177,9 @@ stretch_mode = 4
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_vertical = 4
+tooltip_text = "Bug report link"
 texture_normal = ExtResource("3_m84o8")
+texture_hover = SubResource("PlaceholderTexture2D_m84o8")
 ignore_texture_size = true
 stretch_mode = 4
 
@@ -194,3 +201,6 @@ text = "Mod Installed"
 [node name="DeleteButton" type="Button" parent="MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer" unique_id=1727437547]
 layout_mode = 2
 text = "Delete Mod"
+icon = ExtResource("4_pq8ey")
+icon_alignment = 2
+expand_icon = true
