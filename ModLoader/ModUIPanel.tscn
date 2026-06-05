@@ -96,7 +96,7 @@ anchor_right = 1.0
 offset_bottom = 128.0
 grow_horizontal = 2
 
-[node name="ContentsContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1944658933]
+[node name="ContentsContainer" type="HFlowContainer" parent="MarginContainer" unique_id=950641170]
 layout_mode = 2
 
 [node name="IDHBoxContainer" type="HBoxContainer" parent="MarginContainer/ContentsContainer" unique_id=269972672]
@@ -129,9 +129,27 @@ layout_mode = 2
 size_flags_horizontal = 3
 alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/HBoxContainer/HFlowContainer" unique_id=3251003]
+[node name="VersionLabel" type="Label" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/HBoxContainer/HFlowContainer" unique_id=3251003]
 layout_mode = 2
 text = "Version:"
+
+[node name="VersionLineEdit" type="LineEdit" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/HBoxContainer/HFlowContainer" unique_id=1669227234]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "<Version>"
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer" unique_id=55100123]
+layout_mode = 2
+
+[node name="HashLabel" type="Label" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/HFlowContainer" unique_id=449677960]
+layout_mode = 2
+text = "Hash Value: "
+
+[node name="HashLineEdit" type="LineEdit" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/HFlowContainer" unique_id=968522051]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "<Mod Hash Value>"
+editable = false
 
 [node name="FoldableContainer" type="FoldableContainer" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer" unique_id=272063948]
 layout_mode = 2
