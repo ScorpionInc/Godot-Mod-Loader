@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://7xt6ptlug54g"]
+
+[ext_resource type="PackedScene" uid="uid://b1q1xsbrakmrj" path="res://Scenes/ModUIPanel.tscn" id="1_s1101"]
+
+[node name="ModUI" type="Control" unique_id=1938577912]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="VBoxContainer" parent="." unique_id=1773052512]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 589.0
+
+[node name="Label" type="Label" parent="Control" unique_id=463608910]
+layout_mode = 2
+text = "Mod Loader UI"
+
+[node name="BtnHBoxContainer" type="HBoxContainer" parent="Control" unique_id=1329319926]
+layout_mode = 2
+
+[node name="ScanButton" type="Button" parent="Control/BtnHBoxContainer" unique_id=1431966954]
+layout_mode = 2
+text = "Scan Mods"
+
+[node name="BtnHFlowContainer" type="HFlowContainer" parent="Control/BtnHBoxContainer" unique_id=1307144784]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="EnableAllButton" type="Button" parent="Control/BtnHBoxContainer/BtnHFlowContainer" unique_id=417579296]
+layout_mode = 2
+text = "Enable All
+"
+
+[node name="DisableAllButton" type="Button" parent="Control/BtnHBoxContainer/BtnHFlowContainer" unique_id=1459886420]
+layout_mode = 2
+text = "Disable All"
+
+[node name="HSeparator" type="HSeparator" parent="Control" unique_id=1096443197]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=340760007]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/VBoxContainer" unique_id=1489348493]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+draw_focus_border = true
+scroll_hint_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/ScrollContainer" unique_id=831382868]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ModUIPanel" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1448863587 instance=ExtResource("1_s1101")]
+layout_mode = 2
+
+[node name="ModUIPanel2" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1137854088 instance=ExtResource("1_s1101")]
+layout_mode = 2
+
+[node name="ModUIPanel3" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1903283049 instance=ExtResource("1_s1101")]
+layout_mode = 2
+
+[node name="ModUIPanel4" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1339618121 instance=ExtResource("1_s1101")]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1811026019]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="NonePanel" type="Panel" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer" unique_id=916357216]
+layout_mode = 2
+
+[node name="NoneLabel" type="Label" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer/NonePanel" unique_id=1393023408]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -11.5
+offset_right = 70.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "<No Mods Found>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="Control/VBoxContainer" unique_id=455674171]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=942099268]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextEdit" type="TextEdit" parent="Control/VBoxContainer/HBoxContainer" unique_id=357854501]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "<URL>"
+placeholder_text = "<URL>"
+
+[node name="Button" type="Button" parent="Control/VBoxContainer/HBoxContainer" unique_id=275605169]
+layout_mode = 2
+text = "Download & Install Mod"
+
+[node name="StatusLabel" type="Label" parent="Control/VBoxContainer" unique_id=990484583]
+layout_mode = 2
+text = "Ready."
