@@ -67,27 +67,15 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ModUIPanel" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1448863587 instance=ExtResource("1_s1101")]
-layout_mode = 2
-
-[node name="ModUIPanel2" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1137854088 instance=ExtResource("1_s1101")]
-layout_mode = 2
-
-[node name="ModUIPanel3" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1903283049 instance=ExtResource("1_s1101")]
-layout_mode = 2
-
-[node name="ModUIPanel4" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1339618121 instance=ExtResource("1_s1101")]
-layout_mode = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1811026019]
+[node name="NoneContainer" type="PanelContainer" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1811026019]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="NonePanel" type="Panel" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer" unique_id=916357216]
+[node name="NonePanel" type="Panel" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer/NoneContainer" unique_id=916357216]
 layout_mode = 2
 
-[node name="NoneLabel" type="Label" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer/PanelContainer/NonePanel" unique_id=1393023408]
+[node name="NoneLabel" type="Label" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer/NoneContainer/NonePanel" unique_id=1393023408]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -103,6 +91,18 @@ grow_vertical = 2
 text = "<No Mods Found>"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ModUIPanel" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1448863587 instance=ExtResource("1_s1101")]
+layout_mode = 2
+
+[node name="ModUIPanel2" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1137854088 instance=ExtResource("1_s1101")]
+layout_mode = 2
+
+[node name="ModUIPanel3" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1903283049 instance=ExtResource("1_s1101")]
+layout_mode = 2
+
+[node name="ModUIPanel4" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1339618121 instance=ExtResource("1_s1101")]
+layout_mode = 2
 
 [node name="HSeparator2" type="HSeparator" parent="Control/VBoxContainer" unique_id=455674171]
 layout_mode = 2
