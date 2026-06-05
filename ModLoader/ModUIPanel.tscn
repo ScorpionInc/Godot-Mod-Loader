@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b1q1xsbrakmrj"]
 
-[ext_resource type="Texture2D" uid="uid://bqalt0xw7ng5w" path="res://icon.svg" id="1_8yq7x"]
+[ext_resource type="Texture2D" uid="uid://bqalt0xw7ng5w" path="res://ModLoader/Icons/icon.svg" id="1_8yq7x"]
 
 [sub_resource type="GDScript" id="GDScript_8yq7x"]
 script/source = "extends Control

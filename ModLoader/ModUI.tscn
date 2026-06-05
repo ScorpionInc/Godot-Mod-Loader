@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7xt6ptlug54g"]
 
-[ext_resource type="PackedScene" uid="uid://b1q1xsbrakmrj" path="res://Scenes/ModUIPanel.tscn" id="1_s1101"]
+[ext_resource type="PackedScene" uid="uid://b1q1xsbrakmrj" path="res://ModLoader/ModUIPanel.tscn" id="1_s1101"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fr5uq"]
 font_size = 32
