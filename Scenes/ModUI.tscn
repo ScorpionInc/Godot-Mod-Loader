@@ -62,9 +62,11 @@ size_flags_vertical = 3
 
 [node name="ModUIPanel" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1448863587 instance=ExtResource("1_s1101")]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="ModUIPanel2" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1137854088 instance=ExtResource("1_s1101")]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="ModUIPanel3" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1903283049 instance=ExtResource("1_s1101")]
 layout_mode = 2

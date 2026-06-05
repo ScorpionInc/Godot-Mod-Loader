@@ -2,58 +2,88 @@
 
 [ext_resource type="Texture2D" uid="uid://bqalt0xw7ng5w" path="res://icon.svg" id="1_8yq7x"]
 
-[node name="ModUIPanel" type="AspectRatioContainer" unique_id=1137854088]
-custom_minimum_size = Vector2(0, 100)
+[node name="ModUIPanel" type="Control" unique_id=1720623482]
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -504.0
-offset_bottom = -493.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-alignment_horizontal = 0
 
-[node name="ContentsContainer" type="HBoxContainer" parent="." unique_id=1944658933]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1291341707]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+
+[node name="ContentsContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1944658933]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ContentsContainer" unique_id=1697712323]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer/ContentsContainer" unique_id=279312230]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+
+[node name="IconTextureRect" type="TextureRect" parent="MarginContainer/ContentsContainer/AspectRatioContainer" unique_id=1697712323]
 layout_mode = 2
 texture = ExtResource("1_8yq7x")
-expand_mode = 3
 
-[node name="Label" type="Label" parent="ContentsContainer" unique_id=1590688106]
+[node name="ModNameLabel" type="Label" parent="MarginContainer/ContentsContainer" unique_id=1590688106]
 layout_mode = 2
 text = "<Mod Name Goes Here>"
 
-[node name="VSeparator2" type="VSeparator" parent="ContentsContainer" unique_id=353287166]
+[node name="VSeparator1" type="VSeparator" parent="MarginContainer/ContentsContainer" unique_id=353287166]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ContentsContainer" unique_id=800882155]
+[node name="EndFlowContainer" type="HFlowContainer" parent="MarginContainer/ContentsContainer" unique_id=1921331202]
 layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
 
-[node name="SupportLabel" type="Label" parent="ContentsContainer/VBoxContainer" unique_id=1515354028]
+[node name="SupportVBoxContainer" type="VBoxContainer" parent="MarginContainer/ContentsContainer/EndFlowContainer" unique_id=800882155]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SupportLabel" type="Label" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer" unique_id=1515354028]
 layout_mode = 2
 text = "Support Links:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="ContentsContainer/VBoxContainer" unique_id=985802384]
+[node name="SupportHBoxContainer" type="HBoxContainer" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer" unique_id=1849142847]
 layout_mode = 2
+
+[node name="LinkTextureButton1" type="TextureButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer/SupportHBoxContainer" unique_id=985802384]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 texture_normal = ExtResource("1_8yq7x")
 texture_pressed = ExtResource("1_8yq7x")
+texture_hover = ExtResource("1_8yq7x")
 
-[node name="VSeparator" type="VSeparator" parent="ContentsContainer" unique_id=1905245262]
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="ContentsContainer" unique_id=1557282665]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HFlowContainer" type="HFlowContainer" parent="ContentsContainer/CenterContainer" unique_id=1926730208]
+[node name="LinkTextureButton2" type="TextureButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer/SupportHBoxContainer" unique_id=1959280864]
+custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 4
+texture_normal = ExtResource("1_8yq7x")
+texture_pressed = ExtResource("1_8yq7x")
+texture_hover = ExtResource("1_8yq7x")
 
-[node name="EnableCheckButton" type="CheckButton" parent="ContentsContainer/CenterContainer/HFlowContainer" unique_id=1911452380]
+[node name="VSeparator2" type="VSeparator" parent="MarginContainer/ContentsContainer/EndFlowContainer" unique_id=1905245262]
+layout_mode = 2
+
+[node name="ActionsVBoxContainer" type="VBoxContainer" parent="MarginContainer/ContentsContainer/EndFlowContainer" unique_id=1789527109]
+layout_mode = 2
+alignment = 1
+
+[node name="EnableCheckButton" type="CheckButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer" unique_id=1911452380]
 layout_mode = 2
 text = "Mod Enabled"
+
+[node name="DeleteButton" type="Button" parent="MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer" unique_id=1727437547]
+layout_mode = 2
+text = "Delete Mod"
