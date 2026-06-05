@@ -95,6 +95,7 @@ layout_mode = 2
 
 [node name="IDHBoxContainer" type="HBoxContainer" parent="MarginContainer/ContentsContainer" unique_id=269972672]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer/ContentsContainer/IDHBoxContainer" unique_id=279312230]
 custom_minimum_size = Vector2(128, 128)
@@ -104,10 +105,37 @@ layout_mode = 2
 layout_mode = 2
 texture = ExtResource("1_8yq7x")
 
-[node name="ModNameLabel" type="Label" parent="MarginContainer/ContentsContainer/IDHBoxContainer" unique_id=1590688106]
+[node name="TextVBoxContainer" type="VBoxContainer" parent="MarginContainer/ContentsContainer/IDHBoxContainer" unique_id=1445042521]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer" unique_id=1209056174]
+layout_mode = 2
+
+[node name="ModNameLabel" type="Label" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/HBoxContainer" unique_id=1590688106]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "<Mod Name Goes Here>"
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/HBoxContainer" unique_id=433837145]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/HBoxContainer/HFlowContainer" unique_id=3251003]
+layout_mode = 2
+text = "Version:"
+
+[node name="FoldableContainer" type="FoldableContainer" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer" unique_id=272063948]
+layout_mode = 2
+folded = true
+title = "Mod Description"
+
+[node name="DescriptionLabel" type="Label" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/FoldableContainer" unique_id=999115394]
+visible = false
+layout_mode = 2
+text = "<Mod Description Goes Here>"
 
 [node name="EndFlowContainer" type="HFlowContainer" parent="MarginContainer/ContentsContainer" unique_id=1921331202]
 layout_mode = 2
@@ -131,7 +159,7 @@ vertical_alignment = 1
 layout_mode = 2
 alignment = 1
 
-[node name="LinkTextureButton1" type="TextureButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer/SupportHBoxContainer" unique_id=985802384]
+[node name="WebTextureButton" type="TextureButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer/SupportHBoxContainer" unique_id=985802384]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -140,7 +168,7 @@ texture_normal = ExtResource("2_yp063")
 ignore_texture_size = true
 stretch_mode = 4
 
-[node name="LinkTextureButton2" type="TextureButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer/SupportHBoxContainer" unique_id=1959280864]
+[node name="BugTextureButton" type="TextureButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer/SupportHBoxContainer" unique_id=1959280864]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_vertical = 4
