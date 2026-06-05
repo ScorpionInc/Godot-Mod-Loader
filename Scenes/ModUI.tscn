@@ -2,11 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://b1q1xsbrakmrj" path="res://Scenes/ModUIPanel.tscn" id="1_s1101"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_fr5uq"]
+font_size = 32
+
 [node name="ModUI" type="Control" unique_id=1938577912]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -1152.0
+offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -20,6 +25,8 @@ offset_bottom = 589.0
 [node name="Label" type="Label" parent="Control" unique_id=463608910]
 layout_mode = 2
 text = "Mod Loader UI"
+label_settings = SubResource("LabelSettings_fr5uq")
+horizontal_alignment = 1
 
 [node name="BtnHBoxContainer" type="HBoxContainer" parent="Control" unique_id=1329319926]
 layout_mode = 2
@@ -49,7 +56,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control/VBoxContainer" unique_id=1489348493]
-custom_minimum_size = Vector2(500, 500)
+custom_minimum_size = Vector2(0, 256)
 layout_mode = 2
 draw_focus_border = true
 scroll_hint_mode = 2
@@ -62,11 +69,9 @@ size_flags_vertical = 3
 
 [node name="ModUIPanel" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1448863587 instance=ExtResource("1_s1101")]
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="ModUIPanel2" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1137854088 instance=ExtResource("1_s1101")]
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="ModUIPanel3" parent="Control/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1903283049 instance=ExtResource("1_s1101")]
 layout_mode = 2

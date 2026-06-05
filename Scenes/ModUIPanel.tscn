@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bqalt0xw7ng5w" path="res://icon.svg" id="1_8yq7x"]
 
 [node name="ModUIPanel" type="Control" unique_id=1720623482]
-custom_minimum_size = Vector2(256, 128)
+custom_minimum_size = Vector2(256, 160)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -54,6 +54,7 @@ vertical_alignment = 1
 
 [node name="SupportHBoxContainer" type="HBoxContainer" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer" unique_id=1849142847]
 layout_mode = 2
+alignment = 1
 
 [node name="LinkTextureButton1" type="TextureButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer/SupportHBoxContainer" unique_id=985802384]
 custom_minimum_size = Vector2(16, 16)
@@ -67,7 +68,6 @@ texture_hover = ExtResource("1_8yq7x")
 [node name="LinkTextureButton2" type="TextureButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer/SupportHBoxContainer" unique_id=1959280864]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
-size_flags_horizontal = 3
 size_flags_vertical = 4
 texture_normal = ExtResource("1_8yq7x")
 texture_pressed = ExtResource("1_8yq7x")
