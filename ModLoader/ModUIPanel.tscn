@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bqalt0xw7ng5w" path="res://ModLoader/Icons/icon.svg" id="1_8yq7x"]
 [ext_resource type="Texture2D" uid="uid://5xe7diun5jxp" path="res://ModLoader/Icons/link.svg" id="2_yp063"]
 [ext_resource type="Texture2D" uid="uid://c8ogy38nar6i0" path="res://ModLoader/Icons/bug.svg" id="3_m84o8"]
+[ext_resource type="Texture2D" uid="uid://bxcyig4dvvu6a" path="res://ModLoader/Icons/key.svg" id="4_d0x8v"]
 [ext_resource type="Texture2D" uid="uid://b7lfhqsg61jdd" path="res://ModLoader/Icons/delete.svg" id="4_pq8ey"]
+[ext_resource type="Texture2D" uid="uid://bg612qdw7u82d" path="res://ModLoader/Icons/save.svg" id="5_7kjn6"]
 
 [sub_resource type="GDScript" id="GDScript_8yq7x"]
 script/source = "extends Control
@@ -193,10 +195,16 @@ alignment = 1
 [node name="EnableCheckButton" type="CheckButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer" unique_id=1911452380]
 layout_mode = 2
 text = "Mod Enabled"
+icon = ExtResource("4_d0x8v")
+icon_alignment = 1
+expand_icon = true
 
 [node name="InstallCheckButton" type="CheckButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer" unique_id=1681898366]
 layout_mode = 2
 text = "Mod Installed"
+icon = ExtResource("5_7kjn6")
+icon_alignment = 1
+expand_icon = true
 
 [node name="DeleteButton" type="Button" parent="MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer" unique_id=1727437547]
 layout_mode = 2
