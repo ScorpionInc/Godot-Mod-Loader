@@ -137,6 +137,7 @@ text = "Version:"
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "<Version>"
+editable = false
 
 [node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer" unique_id=55100123]
 layout_mode = 2
@@ -156,10 +157,16 @@ layout_mode = 2
 folded = true
 title = "Mod Description"
 
-[node name="DescriptionLabel" type="Label" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/FoldableContainer" unique_id=999115394]
+[node name="DescriptionLabel" type="TextEdit" parent="MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/FoldableContainer" unique_id=1020757465]
 visible = false
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 text = "<Mod Description Goes Here>"
+placeholder_text = "<Mod Description Goes Here>"
+editable = false
+wrap_mode = 1
+indent_wrapped_lines = true
+scroll_smooth = true
 
 [node name="EndFlowContainer" type="HFlowContainer" parent="MarginContainer/ContentsContainer" unique_id=1921331202]
 layout_mode = 2
@@ -172,6 +179,7 @@ layout_mode = 2
 
 [node name="SupportVBoxContainer" type="VBoxContainer" parent="MarginContainer/ContentsContainer/EndFlowContainer" unique_id=800882155]
 layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="SupportLabel" type="Label" parent="MarginContainer/ContentsContainer/EndFlowContainer/SupportVBoxContainer" unique_id=1515354028]
 layout_mode = 2
@@ -208,6 +216,7 @@ layout_mode = 2
 
 [node name="ActionsVBoxContainer" type="VBoxContainer" parent="MarginContainer/ContentsContainer/EndFlowContainer" unique_id=1789527109]
 layout_mode = 2
+size_flags_horizontal = 3
 alignment = 1
 
 [node name="EnableCheckButton" type="CheckButton" parent="MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer" unique_id=1911452380]
