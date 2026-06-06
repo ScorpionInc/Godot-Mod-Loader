@@ -14,8 +14,8 @@ script/source = "extends Control
 @export var mod_install_path   : String = \"\"
 @export var mod_available_path : String = \"\"
 
-@onready var icon_texture_rect = $MarginContainer/ContentsContainer/AspectRatioContainer/IconTextureRect
-@onready var mod_name_label = $MarginContainer/ContentsContainer/ModNameLabel
+@onready var icon_texture_rect = $MarginContainer/ContentsContainer/IDHBoxContainer/AspectRatioContainer/IconTextureRect
+@onready var mod_name_label = $MarginContainer/ContentsContainer/IDHBoxContainer/TextVBoxContainer/HBoxContainer/ModNameLabel
 
 @onready var enable_check_btn = $MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer/EnableCheckButton
 @onready var install_check_btn = $MarginContainer/ContentsContainer/EndFlowContainer/ActionsVBoxContainer/InstallCheckButton
